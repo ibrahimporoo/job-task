@@ -1,0 +1,258 @@
+@font-face {
+	font-family: 'Abdoullah Ashgar EL-kharef';
+	src: url('fonts/abdoullah-ashgar-el-kharef.ttf');
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+}
+/* Start Components */
+.get-start {
+	/* Button */
+	/* Auto layout */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 50px;
+	gap: 12px;
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
+	box-shadow: 0px 6px 18px #9CADF2;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+	border: none;
+}
+/* End Components */
+.page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 0 15px;
+	gap: 10px;
+	position: relative;
+}
+.page:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+	background: #fff url(../assets/gradientbackground.png) center center / cover;
+}
+.page .errors-alert {
+	position: fixed;
+	width: 60%;
+	border-radius: 4px;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	background-color: #8bc34a;
+	z-index: 9999;
+	padding: 40px;
+	transition: .3s;
+}
+.page .errors-alert.show {
+	transform: translate(-50%, 0);
+}
+.page .errors-alert .close-alert {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: crimson;
+	color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.page .errors-alert .message {
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+.page .errors-alert .description li {
+	margin-bottom: 7px;
+}
+.page .errors-alert .description li .err-title {
+	font-size: 15px;
+}
+.welcome-screen,
+.register-screen {
+	background: rgba(245, 247, 255, 0.85);
+	border-radius: 10px;
+	position: relative;
+}
+.welcome-screen .content-holder,
+.register-screen .content-holder {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 60px;
+}
+.welcome-screen .content-holder img {
+	background: url(ZX2qrwl6sOuIQVK8hYvXhhoDwDtrlU6npi9cAR9p.jpg);
+	border-radius: 10px;
+}
+.welcome-screen .content-holder .text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 30px;
+}
+.welcome-screen .content-holder .title,
+.register-screen .content-holder .title {
+	font-family: 'Abdoullah Ashgar EL-kharef', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 120%;
+	text-transform: capitalize;
+	color: #2D2D2D;
+}
+.welcome-screen .content-holder .desc,
+.register-screen .content-holder .desc {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	color: #1F1249;
+}
+.welcome-screen .content-holder .text .link {
+	height: 26px;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 160%;
+	text-decoration-line: underline;
+	color: #1F1249;
+	cursor: pointer;
+}
+@media (max-width: 820px) {
+	.page {
+    padding: 0;
+	}
+	.welcome-screen {
+		width: 100%;
+		height: 100%;
+	}
+	.welcome-screen .content-holder {
+		flex-direction: column;
+	}
+	.welcome-screen .content-holder img {
+    max-width: 315px;
+		height: 315px;
+	}
+	.welcome-screen .content-holder .text {
+    gap: 30px;
+		text-align: center;
+	}
+	.welcome-screen .content-holder .text .title {
+		width: 100%;
+	}
+}
+/* End of Get Started Page */
+/* Start Register Page */
+.register-screen .content-holder img {
+	border-radius: 10px;
+}
+.register-screen .content-holder {
+	align-items: flex-start;
+}
+.register-screen .content-holder .description {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.register-screen .content-holder .description .input-fields {
+	width: 100%;
+	padding-top: 50px;
+}
+.register-screen .content-holder .description .input-fields .field {
+	background-color: white;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	padding: 3px 5px;
+	margin-bottom: 20px;
+}
+.register-screen .content-holder .description .input-fields .field.checked {
+	margin-bottom: 5px;
+}
+.register-screen .content-holder .description .input-fields .result {
+	display: none;
+	margin-bottom: 20px;
+	padding-left: 50px;
+}
+.register-screen .content-holder .description .input-fields .field.checked + .result {
+	transition: .3s;
+	color: red;
+	display: block;
+}
+.register-screen .content-holder .description .input-fields .field.checked + .result p {
+	max-width: 80%;
+}
+.register-screen .content-holder .description .input-fields .field i {
+	color: #DBE3FF;
+	margin: 15px;
+}
+.register-screen .content-holder .description .input-fields .field input {
+	border: none;
+	border-left: 1px solid #DBE3FF;
+	padding-left: 4px;
+	outline: 0;
+	width: 100%;
+	height: 33px;
+	padding: 6px;
+}
+@media (max-width: 1150px) {
+	.register-screen .content-holder img {
+		max-width: 400px;
+	}
+	.register-screen .content-holder .title {
+		font-size: 29px;
+	}
+}
+@media (max-width: 1000px) {
+	.register-screen .content-holder {
+    flex-direction: column;
+    align-items: center;
+	}
+	.register-screen .content-holder .description .input-fields {
+    gap: 20px;
+    padding-top: 10px;
+	}
+}
+@media (max-width: 700px) {
+	.welcome-screen, .register-screen {
+		width: 100%;
+    height: 100vh;
+	}
+	.register-screen .content-holder img {
+		width: 315px;
+		height: 315px;
+	}
+	.register-screen .content-holder .title,
+	.register-screen .content-holder .desc {
+		text-align: center;
+	}
+	.welcome-screen .content-holder .text .link {
+    margin: 0 auto;
+	}
+	.loged-in .content-holder .text .title {
+		font-size: 22px;
+	}
+}
+/* End Register Page */

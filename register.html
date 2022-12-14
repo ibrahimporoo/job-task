@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Job task</title>
+	<!-- Mulish Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<!-- CSS File -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Font Awesome Library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="page">
+		<div class="errors-alert">
+			<button class="close-alert">X</button>
+			<h4 class="message">The given data are not valid</h4>
+			<ul class="description">
+				<!-- <li>The Email Must be in valid format</li> -->
+			</ul>
+		</div>
+		<!-- Start Welcome Screen -->
+		<section class="register-screen">
+			<div class="content-holder">
+				<img src="assets/register-img.jpeg" alt="IMG Placeholder">
+				<div class="description">
+					<h3 class="title">Create Account</h3>
+					<p class="desc">Go ahead and sign up, let everyone know how awesome you are!</p>
+					<form novalidate id="formInputs" class="input-fields">
+						<div class="field">
+							<i class="fa-solid fa-user"></i>
+							<input id="username" type="text" placeholder="Username">
+						</div>
+						<p class="result username-result">Result</p>
+						<div class="field">
+							<i class="fa-regular fa-envelope"></i>
+							<input id="email" type="email" placeholder="Email">
+						</div>
+						<p class="result mail-result">Result</p>
+						<div class="field">
+							<i class="fa-solid fa-lock"></i>
+							<input id="pass" type="password" placeholder="Password">
+						</div>
+						<p class="result pass-result">Result</p>
+						<div class="field">
+							<i class="fa-solid fa-lock"></i>
+							<input id="pass-confirmation" type="password" placeholder="Confirm Password">
+						</div>
+						<p class="result pass-confirm-result">Result</p>
+						<button type="submit" class="get-start">Create Account</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- End Welcome Screen -->
+	</div>
+	<script src="js/register.js"></script>
+</body>
+</html>
